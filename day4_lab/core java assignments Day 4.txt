@@ -1,0 +1,225 @@
+Day 1
+
+1. 
+Accept  i/ps from User , till user enters "5" or any other option.
+I/P : operation(add|sub|mult|div : 1 | 2|3|4) , number1(double) , number2(double) 
+Display the result of the operation.
+
+2. Accept 2 double values from command line argument.  
+Compute it's  average.
+(Hint : Double.parseDouble)
+
+3. Display food menu to user. Assign fixed prices to food items.
+User will select items from menu along with the quantity. (eg 1. Dosa 2. Samosa 3. Rice 4. Noodles .......10 . Generate Bill ) When user enters 'Generate Bill' option, display total bill & exit.
+(Can use System.exit(0) to terminate java app or simply exit=true )
+
+4. Use Scanner to accept 2 i/ps
+Check it's data type . If its integer , accept ints n compute it's average. Otherwise , print error message eg : Invalid 1st number or Invalid 2nd number
+(Hint : sc.hasNextInt() , sc.nextInt())
+
+Day 2 
+0. Download n extract day2_data.zip
+1. Revise class work
+2. Complete pending assignments. (after today's work!)
+3. Solve Tank assignment along with memory picture.
+
+class Tank {
+  private int level;
+  Tank(int l)
+   {
+     level=l;
+   }
+  public void setLevel(int level1)
+  {
+    level=level1;
+  }
+  public int getLevel()
+  {
+    return level;
+  }
+}	
+
+public class Assignment {
+  public static void main(String[] args) {
+    Tank t1 = new Tank(10);
+    Tank t2 = new Tank(20);
+   //How many objects marked for GC ?
+    s.o.p("1: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1 = t2;// GC : 1st tank : un reachable
+    s.o.p("2: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1.setLevel(27);
+     s.o.p("3: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t2.setLevel(t1.getLevel()+10);
+     s.o.p("4: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());// 37 37
+  }
+}
+
+4. Create a java applicstion for the following.
+ Create a Customer class , with data members (all private : tight encapsulation)
+name(String),email(String),age(int), creditLimit(double)
+
+4.1 Supply a parameterized constructor to accept all details from user
+
+4.2 Supply an argument less  constructor to init default name to "Riya" , email to "riya@gmail.com",age=25,creditLimit=10000
+(Must use constructor chaining)
+
+4.3 Write a method , getDetails to return String form of customer name & credit limit only.
+4.4 Supply getter & setter for creditLimit.
+
+Naming convention : public void setCreditLimit(double limit) {...}
+public double getCreditLimit(){...}
+
+4.5 Create a TestCustomer class . Use scanner to accept user i/ps.
+Create 2 customers using 2 different constructors(4.1 : customer1 ,4.2 : customer2)
+Display customer details of both customers.
+Prompt user , for changing creditLimit of the customer2.
+Display new credit limit on the console.
+
+5. Solve ready made code examples & guess the o/p from :
+day2_data\day2_help\ready code\params_passing
+
+6. Create new folder <day3_lab2> , create sub folders <src> & <bin> below that.
+6.1 Add your Customer class under "com.iacsd" package & TestCustomer class under "com.tester" package. 
+Compile n run.
+
+Day 3
+1. Revise class work.
+2. In today's code sample : day3_data\day3\src\com\tester\TestBoxArray
+replace for loop(line nos 28 --32) by for-each .
+Observe n conclude.
+
+3. Create Point class Point2D , under package com.app.geometry   : for representing a point in x-y co-ordinate system.
+eg : day3_lab \src 
+Create folder structure :
+com \ app \geometry --- Point2D.java
+package com.app.geometry;
+
+3.1 Create a parameterized constructor to accept x & y co-ords.
+
+3.2 Add public String getDetails() --to return string form point's x & y co-ords
+
+3.3 Add isEqual method to Point2D class : boolean returning method : must ret. true if both points are having same x,y co-ords or false otherwise. 
+eg : boolean isEqual(Point2D anotherPoint){....}
+
+3.4 Add a method to Point2D class -- to create and return new point having given x & y offset.
+eg : Point2D p1=new Point2D(10,20);
+Point2d p3=p1.createNewPoint(5,-2);//p3 : 15,18
+If user supplies offset of (5, -2) : your method should return a new point object ref placed at (15,18)
+eg : Point2D createNewPoint(int xOff,iny yOff){
+  Point2D newPoint=new Point2D(this.x+xOff,this.y+yOff);
+  return newPoint;
+}
+
+3.5 Add calculateDistance method to calculate distance between current point & specified point & return the distance to the caller.
+(eg double  calcDistance(Point2D p2))
+Hint : Use distance formula . Use java.lang.Math class methods --sqrt, pow etc.
+eg : Math.sqrt(Math.pow(p2.x-x,2).....);
+
+3.6 Write TestPoint class , under "com.app.tester" package with a main method
+Accept co ordinates of 2 points from user (Scanner) --p1 & p2
+
+3.7 Use getDetails method to display point details.(p1's details & p2's details)
+
+3.8 Invoke isEqual & display if points are same or different (i.e p1 & p2 are located at the same position)
+
+
+3.9 Display distance between 2 points.(between p1 & p2)
+
+3.10
+Create a new TestPoints class in "com.app.tester" package for the following.
+
+1.1 Prompt user , how many points to plot?
+Create suitable array , to store Point2D type of references.
+eg : Point2D[] points=new Point2D[....];
+boolean exit=false;
+while(!exit)
+ switch-case
+1.2 Add a menu , Run the application till user chooses option 10 (exit)
+
+1 Plot a new point
+I/P --index , x & y
+eg : If user supplies 5 50 100
+Create a Point2D with x, y of (50,100) & its reference should be stored at the 5th index position in array.
+eg : points[index]=new Point2D(....);
+
+
+2 Display all points plotted so far. (Use for-each)
+eg : for-each : null checking 
+
+
+3. Calculate distance
+I/P strt , end point indexes.
+eg : If user enters 2 6
+Find out the distance between 2nd & 6th point. (array indexes start from 0)
+eg : points[strtIndex].calcDistance(points[endIndex]);
+
+
+10. Exit
+
+Note : Boundary condition checking & null checking is expected.
+(Meaning : if user supplies index > array length -1 , then give error message : invalid index --out of range
+If no point is plotted at user specified index , then give error message : invalid index -- no point plotted here.)
+
+Day 4
+Reading work (later after lab session!)
+0. Satrt with Eclipse IDE (eclipse 2020 )
+Change perspective to Java .
+Confirm JRE settings 
+Import day4 project (for revision)
+
+1. Go through "readme inheritance_polymorphism.txt" from day4_help.
+(at least till the topics covered today)
+
+Go through "regarding private members n inheritance.txt" 
+It's a popular interview question.
+
+2. Go through all code samples & memory diagrams.
+
+3. Solve this.
+Fresh business scenario to apply inheritance , polymorphism   to emp based organization scenario.
+
+Create Emp based organization structure --- Emp , Mgr , Worker
+All of above classes must be in --com.app.org
+
+3.1 Emp state--- id(int), name, deptId , basic(double)
+Accept all of above in constructor arguments.
+Behaviour ---1.  get emp details -- override toString((inherited from Object class)
+2. compute net salary ---ret 0
+(eg : public double computeNetSalary(){return 0;})
+
+3.2 Mgr state  ---id,name,basic,deptId , perfBonus
+Behaviour ----1. get mgr details :  override toString (inherited from Emp class)
+2. compute net salary (formula: basic+perfBonus) -- override computeNetSalary
+3. get performance bonus. --add a new method to return bonus.(getter)
+
+
+3.3 Worker state  --id,name,basic,deptId,hoursWorked,hourlyRate
+Behaviour--- 
+1. get worker details -- :  override toString. (inherited from Emp class)
+2.  compute net salary (formula:  = basic+(hoursWorked*hourlyRate) --override computeNetSalary
+3. get hrlyRate of the worker  -- add a new method to return hourly rate of a worker.(getter)
+
+Organize classes in inheritance  hierarchy.
+
+Write TestOrganization in "tester" package.
+Create suitable array to store organization details.
+Provide following options
+
+1. Hire Manager
+I/P : all manager details
+
+2. Hire Worker  
+I/P : all worker details
+
+3. Display information of all employees including net salary , display bonus if its' manager or display hourly rate of a worker  using single for-each loop.4
+
+4. Update Manager's bonus
+I/P : emp id & bonus increment
+O/P Error or success message.
+ 
+5. Exit
+

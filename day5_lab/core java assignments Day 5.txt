@@ -1,0 +1,39 @@
+
+Day 5
+1. Import day5.1 & day5.2 in your eclipse workspace n revise important topics from day5.1
+
+2. Copy day4_lab project into day5_lab .
+Add abstraction.
+In Emp class , since there is no formula for sal computation , make the method abstract.
+
+eg : public abstract double computeNetSalary();
+Add @Override annotation suitably & test it.
+
+3. Revise important topics from day5.2
+
+4. Solve this.
+Create Java application for fixed stack & growable stack based on Stack i/f , for storing emp details
+
+Steps
+
+1.1  Create Employee class -- id,name, constructor,toString
+1.2 Stack interface -- push & pop functionality for Emp refs. & declare STACK_SIZE as a constant. 
+1.3 Create implementation class of Stack i/f -- FixedStack (array based)
+
+1.4 Create implementation class of Stack i/f-- GrowableStack (array based)
+
+1.5
+From tester class (Must use dynamic method dispatch using interfaces)
+--- display Menu
+(Note : Must use 1 switch-case only.
+Should not use any instanceof checking n downcasting)
+Once user selects either fixed or growable stack , user shouldn't be allowed to change the selection of the stack.)
+Options
+1 -- Choose Fixed Stack
+2 -- Choose Growable Stack
+Accept following options only after initial selection.
+3 -- Push data 
+4 --- Pop data & display
+5 -- Exit
+
+

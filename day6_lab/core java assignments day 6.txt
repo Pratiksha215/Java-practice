@@ -1,0 +1,13 @@
+Day 6
+0. How to debug in eclipse ?
+1. Import day6.1 in your workspace & revise
+2. Complete discussion on literal vs non literal strings.
+3. Complete pending assignments.
+4. Modify Day 5 , stack assignment to add exception handling
+4.1 Create a custom exception class : StackHandlingException under package "custom_excs"
+4.2 In case of stack overflow or underflow , throw suitably custom exception
+4.3 Supply centralized exception handling (i.e only 1 try-with-resources n catch-all block in Tester's main . Use throws for delegating exc handling)
+4.4 Display error messages via catch block (eg : e.getMessage())
+
+5. Solve ready code samples
+method overloading , co variance , multi dim arrays.

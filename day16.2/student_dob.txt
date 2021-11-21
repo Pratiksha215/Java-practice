@@ -1,0 +1,4 @@
+Student [rollNo=12, name=priya, dob=1990-02-23, currentSubject=JAVA, gpa=4.2, adr=Address [city=indore, state=MP, phoneNo=752446]]
+Student [rollNo=10, name=ravi, dob=1990-12-13, currentSubject=AWP, gpa=7.5, adr=Address [city=nagpur, state=MH, phoneNo=852446]]
+Student [rollNo=5, name=shekhar, dob=1991-12-13, currentSubject=DBT, gpa=8.9, adr=Address [city=pune, state=MH, phoneNo=452446]]
+Student [rollNo=15, name=riya, dob=1992-12-13, currentSubject=MEAN, gpa=6.9, adr=Address [city=mumbai, state=MH, phoneNo=672446]]
